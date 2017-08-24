@@ -1,0 +1,132 @@
+/*-------------------------------------------------.
+|                     General                      |
+`------------------------------------------------*/
+
+html {
+    font: 300 12px/24px sans-serif;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.5em;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/*-------------------------------------------------.
+|                     Layout                       |
+`------------------------------------------------*/
+
+.container {
+    max-width: 50rem;
+}
+
+.full-page {
+    width: 100%;
+    height: 100%;
+}
+
+.row {
+    padding: 5rem;
+}
+.row__full {
+    width: 100%;
+    height: 100%;
+}
+.row__alt {
+    background-color: #efefef;
+}
+
+.v-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY( -50% );
+        -ms-transform: translateY( -50% );
+            transform: translateY( -50% );
+}
+
+.h-center-wrap {
+    text-align: center;
+}
+.h-center,
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*-------------------------------------------------.
+|                     Clearfix                     |
+`------------------------------------------------*/
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*-------------------------------------------------.
+|                  Primary Header                  |
+`------------------------------------------------*/
+
+.primary-header {
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    background-color: black;
+    color: white;
+    padding: 0 5rem;
+}
+
+.primary-header .logo {
+    float: left;
+    height: 5rem;
+    line-height: 5rem;
+    text-transform: uppercase;
+}
+
+.primary-nav {
+    float: right;
+}
+.primary-nav ul {
+    float: right;
+}
+.primary-nav li {
+    height: 5rem;
+    line-height: 5rem;
+    float: left;
+    margin-left: 1em;
+}
+
+/*-------------------------------------------------.
+|                     Home Row                     |
+`------------------------------------------------*/
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+h1 small {
+    display: block;
+    font-size: 1rem;
+    text-transform: none;
+    max-width: 24rem;
+    margin-top: .5rem;
+    line-height: 1.25rem;
+}
