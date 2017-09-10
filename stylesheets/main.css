@@ -3,21 +3,40 @@
 `------------------------------------------------*/
 
 html {
-    font: 300 12px/24px sans-serif;
+    font: 400 12px/24px 'Josefin Sans', 'Myriad Pro', 'Century Gothic', Helvetica, Verdana, Arial, sans-serif;
+}
+
+body {
+    color: #333;
 }
 
 h2 {
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
 }
 
 h3 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+h2, h3 {
+    color: #1BA39C;
 }
 
 p {
-    margin-bottom: 1rem;
+    font-size: 1.5em;
+    margin-bottom: 3rem;
     line-height: 1.5em;
+}
+@media all and (min-width: 700px) {
+    p {
+        font-size: 2em;
+        margin-bottom: 4rem;
+    }
 }
 p:last-child {
     margin-bottom: 0;
@@ -28,13 +47,42 @@ a {
     text-decoration: none;
     display: inline-block;
 }
+a.link {
+    color: #4B77BE;
+}
+
+.icon {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+}
+
+.small-hidden {
+    display: none;
+}
+@media all and (min-width: 600px) {
+    .small-hidden {
+        display: block;
+    }
+    .big-hidden {
+        display: none;
+    }
+}
+
+/*-------------------------------------------------.
+|                     Colors                       |
+`------------------------------------------------*/
+
+.color-green {
+    color: #1BA39C;
+}
 
 /*-------------------------------------------------.
 |                     Layout                       |
 `------------------------------------------------*/
 
 .container {
-    max-width: 50rem;
+    max-width: 60rem;
 }
 
 .full-page {
@@ -43,14 +91,19 @@ a {
 }
 
 .row {
-    padding: 5rem;
+    padding: 7rem 3rem;
+}
+@media all and (min-width: 700px) {
+    .row {
+        padding: 7rem 5rem;
+    }
 }
 .row__full {
     width: 100%;
     height: 100%;
 }
 .row__alt {
-    background-color: #efefef;
+    background-color: #f9f9f9;
 }
 
 .v-center {
@@ -86,11 +139,16 @@ a {
 
 .primary-header {
     position: fixed;
+    z-index: 1000;
     width: 100%;
     height: 5rem;
-    background-color: black;
-    color: white;
-    padding: 0 5rem;
+    background-color: rgba(255, 255, 255, .8);
+    padding: 0 2rem;
+}
+@media all and (min-width: 600px) {
+    .primary-header {
+        padding: 0 5rem;
+    }
 }
 
 .primary-header .logo {
@@ -98,19 +156,61 @@ a {
     height: 5rem;
     line-height: 5rem;
     text-transform: uppercase;
+    font-size: 1.125em;
+    letter-spacing: .1em;
+}
+
+.header-menu-icon {
+    height: 5rem;
+    padding: 1.5rem 0;
+    float: right;
 }
 
 .primary-nav {
-    float: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2000;
+    background-color: white;
 }
 .primary-nav ul {
-    float: right;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translateY( -50% );
+       -moz-transform: translateY( -50% );
+            transform: translateY( -50% );
 }
 .primary-nav li {
     height: 5rem;
     line-height: 5rem;
-    float: left;
-    margin-left: 1em;
+    font-size: 2rem;
+}
+.nav-cross-icon {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+@media all and (min-width: 600px) {
+    .primary-nav {
+        position: static;
+        float: right;
+        background-color: transparent;
+    }
+    .primary-nav ul {
+        position: static;
+        -webkit-transform: none;
+           -moz-transform: none;
+                transform: none;
+        float: right;
+    }
+    .primary-nav li {
+        float: left;
+        margin-left: 1em;
+        font-size: 1.125em;
+    }
 }
 
 /*-------------------------------------------------.
@@ -118,15 +218,27 @@ a {
 `------------------------------------------------*/
 
 h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: .1em;
+    color: white;
+}
+@media all and (min-width: 700px) {
+    h1 {
+        font-size: 5rem;
+    }
 }
 
 h1 small {
     display: block;
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-transform: none;
-    max-width: 24rem;
+    max-width: 54rem;
     margin-top: .5rem;
-    line-height: 1.25rem;
+    line-height: 1.25em;    
+}
+
+#home-banner {
+    background-image: url('https://source.unsplash.com/wVjd0eWNqI8/1200x800');
+    background-size: cover;
+    background-position: center;
 }

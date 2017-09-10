@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
         <link rel="stylesheet" href="stylesheets/reset.css">
-        <link rel="stylesheet" href="stylesheets/fonts.css">
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="stylesheets/main.css">
     </head>
 
@@ -18,18 +18,21 @@
 
         <header class="primary-header clearfix">
             <div class="logo">Arihant Foundation</div>
-            <nav class="primary-nav">
+            <nav id="primary-nav" class="primary-nav small-hidden">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#mission">Mission</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+         -           <li><a class="nav-link" href="#services">Services</a></li>
+                    <li><a class="nav-link" href="#mission">Mission</a></li>
+                    <li><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdw4Mw0ogDggj2PLlDAnCwuKd92tXHy9cOAZAH85dhLivudwg/viewform?usp=sf_link">Form</a></li>
                 </ul>
+                <img id="cross-btn" class="icon nav-cross-icon big-hidden" src="assets/icons/cross.svg">
             </nav>
+            <img id="menu-btn" class="icon header-menu-icon big-hidden" src="assets/icons/menu.svg">
         </header>
 
         <!-- Home -->
 
-        <section class="row row__full">
+        <section id="home-banner" class="row row__full">
             <h1 class="v-center h-center-wrap">
                 Arihant Foundation
                 <small class="h-center">
@@ -61,6 +64,9 @@
                 <p>
                     Looking forward to your support in my journey to make their lives as happy and
                     meaningful as possible.
+                </p>
+                <p class="color-green">
+                    &mdash; Shruti Mittal (Founder, Director)
                 </p>
             </div>
         </section>
@@ -150,5 +156,20 @@
                 </p>
             </div>
         </section>
+
+        <!-- Form -->
+
+        <section class="row">
+            <h2 class="h-center-wrap">Form</h2>
+            <div class="container">
+                <p class="h-center">
+                    <a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSdw4Mw0ogDggj2PLlDAnCwuKd92tXHy9cOAZAH85dhLivudwg/viewform?usp=sf_link">
+                    Click here to fill the form.
+                    </a>
+                </p>
+            </div>
+        </section>
     </body>
+
+    <script src="scripts/main.js"></script>
 </html>
