@@ -16,3 +16,18 @@ crossButton.addEventListener('click', hideMenu);
 for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener('click', hideMenu);
 }
+
+function initMap() {
+    var myLatLng = {lat: 28.648055, lng: 77.285799};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Address'
+    });
+}
