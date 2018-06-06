@@ -250,7 +250,7 @@ h1 {
     font-size: 3rem;
     letter-spacing: .1em;
     color: white;
-    padding: 5rem 0 0rem 0;
+    padding-top: 3rem;
 }
 @media all and (min-width: 700px) {
     h1 {
@@ -274,9 +274,12 @@ h1 small {
 }
 
 #home-banner {
-    background-image: url('https://source.unsplash.com/wVjd0eWNqI8/1200x800');
+    background-image: url('../assets/images/banner.jpg');
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #map {
